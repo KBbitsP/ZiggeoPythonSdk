@@ -19,6 +19,8 @@ ziggeo = Ziggeo(app_token, private_key, encryption_key)
 
 arguments = {}
 arguments["session_limit"] = 10
-arguments["grants"] = '{"read": "all"}'
+arguments["grants"] = {"read": {
+			"all": True
+		}}
 
 print(ziggeo.auth().generate(arguments))
